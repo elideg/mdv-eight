@@ -7,14 +7,14 @@ import { ProjectComponent } from './project/project.component';
 import { WildcardComponent } from './wildcard/wildcard.component';
 
 const routes: Routes = [
-  { path: '', children: [
+  { path: 'projects', children: [
     { path: '', component: ProjectComponent },
-    { path: 'project/:id', component: ProjectItemComponent }
+    { path: ':id', component: ProjectItemComponent }
   ]},
   { path: 'login', component: LoginComponent },
   { path: '404', component: WildcardComponent },
-  { path: '', pathMatch: 'full', redirectTo: 'login' },
-  { path: '**', redirectTo: '404' }
+  { path: '', redirectTo: 'login', pathMatch: 'full', },
+  { path: '**', redirectTo: '404', pathMatch: 'full', }
 ]
 
 @NgModule({

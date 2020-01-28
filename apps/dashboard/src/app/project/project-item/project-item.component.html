@@ -1,5 +1,8 @@
 <div class="d-flex justify-content-center align-content-center mt-5" *ngIf="_project | async as project">
-<mat-card class="col-4 w-50 background-primary">
+  <button mat-icon-button [routerLink]="['/projects']">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <mat-card class="col-4 w-50 background-primary">
   <mat-card-header>
     <mat-card-title >
       <h1>
@@ -8,6 +11,10 @@
     </mat-card-title>
     <ng-template #elseCreateNew>
       <h1>Create a New Project</h1>
+<button mat-icon-button>
+  <mat-icon>arrow_back</mat-icon>
+</button>
+
     </ng-template>
   </mat-card-header>
   <form [formGroup]=form #formDirective="ngForm">

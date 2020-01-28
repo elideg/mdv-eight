@@ -13,7 +13,7 @@
         <p mat-line>
           {{project.details}}
         </p>
-        <button mat-mini-fab class="mr-2" [routerLink]="['project', project.id]">
+        <button mat-mini-fab class="mr-2" [routerLink]="[project.id]">
           <mat-icon>info</mat-icon>
         </button>
         <button mat-mini-fab (click)="deleted.emit(project); $event.stopImmediatePropagation()">

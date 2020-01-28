@@ -11,7 +11,7 @@ import { tap } from 'rxjs/operators';
   styleUrls: ['./project-item.component.scss']
 })
 export class ProjectItemComponent implements OnInit {
-  private _project;
+  _project;
 
   public get project() {
     return this._project;
