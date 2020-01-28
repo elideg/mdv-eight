@@ -1,0 +1,22 @@
+<div class="d-flex justify-content-center align-content-center mt-5" *ngIf="_project | async as project">
+<mat-card class="col-4 w-50 background-primary">
+  <mat-card-header>
+    <mat-card-title >
+      <h1>
+        {{ originalTitle }}
+      </h1>
+    </mat-card-title>
+    <ng-template #elseCreateNew>
+      <h1>Create a New Project</h1>
+    </ng-template>
+  </mat-card-header>
+  <form [formGroup]=form #formDirective="ngForm">
+    <mat-card-content class="background-accent">
+        <p mat-line>project title:</p><h3 mat-line class="background">{{project.title}}</h3>
+        <p mat-line>project details:</p><h3 mat-line>{{project.details}}</h3>
+    </mat-card-content>
+    <mat-card-actions>
+    </mat-card-actions>
+  </form>
+</mat-card>
+</div>
